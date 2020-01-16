@@ -1,17 +1,18 @@
-clc;
-getd('/Users/mat/Projekty/sand-simulation/functions');
+getd('./functions');
+xdel(winsid());
 
+exec setCases.sci;
+
+state = round(rand(1000, 1000) - .3);
 shift = 0;
 
-state = [0 30 30 0; 0 0 0 0; 0 0 0 0; 0 0 0 0];
-newState = state;
 while 1
-  newState = Evolve(state, shift);
+  newState = Evolve(state, shift, .01);
   if newState == state
     break;
   end
   state = newState;
   shift = 1 - shift;
   Draw(state);
-  sleep(500);
+  sleep(10);
 end
