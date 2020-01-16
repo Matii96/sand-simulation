@@ -4,12 +4,13 @@ xdel(winsid());
 exec setCases.sci;
 
 // Prepare arrays for multiple asynchronous simulations
+state = StartingPosition();
 blockadeChances = [.4 .35 .3 .25 .2 .15 .1 .05 .02];
 states = [];
 iterations = zeros(1, length(blockadeChances));
 ended = zeros(1, length(blockadeChances));
 for i = 1:length(blockadeChances)
-  states(:,:,i) = round(rand(40, 50) - .3);
+  states(:,:,i) = state;
 end
 
 // Prepare subplot size
