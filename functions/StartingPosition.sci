@@ -1,5 +1,5 @@
 function [state] = StartingPosition()
-  state = zeros(100,100);
+  state = zeros(50, 40);
   s = size(state);
   for x = 1:s(1)
     for y = 1:s(2)

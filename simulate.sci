@@ -21,5 +21,5 @@ while 1
   state = newState;
   shift = 1 - shift;
   Draw(state);
-  //sleep(500);
+  sleep(150);
 end
