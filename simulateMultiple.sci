@@ -4,7 +4,8 @@ xdel(winsid());
 exec setCases.sci;
 
 // Prepare arrays for multiple asynchronous simulations
-state = StartingPosition();
+state = zeros(30, 30);
+state(1:10,:) = 1;
 blockadeChances = [.4 .35 .3 .25 .2 .15 .1 .05 .02];
 states = [];
 iterations = zeros(1, length(blockadeChances));
